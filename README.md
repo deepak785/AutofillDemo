@@ -6,7 +6,8 @@ Android Studio 2.4 Preview 7 or higher <br/>
 An emulator or device running `Android Oreo or higher`<br/>
 * Note: This sample service stores all `autofill` data in SharedPreferences (Local storage). Be careful about what you store when experimenting with the sample because anyone with root access to your device will be able to view your autofill data.<br/>
 
-![autofill](https://user-images.githubusercontent.com/29621738/57718976-54ba9300-769c-11e9-8c04-7faa365970fe.gif)<br/>
+![original](https://user-images.githubusercontent.com/29621738/57721178-2b503600-76a1-11e9-81bb-caa4f5b0fc47.png)
+<br/>
 
 The sample's Autofill service is implemented to parse the client's view hierarchy in search of `autofillable` fields that it has data for. If such fields exist in the hierarchy, the service sends data suggestions to the client to autofill those fields. The client uses the following attributes to specify autofill properties: `importantForAutofill`, `autofillHints`, and `autofillType`. importantForAutofill specifies whether the view is autofillable. autofillHints is a list of strings that hint to the service what data to fill the view with. This sample service only supports the hints listed here with the prefix AUTOFILL_HINT_*. autofillType tells the service the type of data it expects to receive (i.e. a list index, a date, or a string). Specifying autofillType is only necessary when implementing a custom view since all of the provided widgets in the UI toolkit do this for you.<br/>
 To set the device's default Autofill service to the one in the sample, edit _Settings_ > _System_ > *Languages & Input* > *Advanced* > *Auto-fill service* and select the sample app.<br/>
